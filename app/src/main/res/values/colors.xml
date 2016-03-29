@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="colorNavDrawer">#455A64</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWrapper">#04B45F</color>
+    <color name="colorText">#000000</color>
+    <color name="colorTextInverse">#FFFFFF</color>
+    <color name="colorBackground">#393838</color>
+    <color name="colorClear">#FFFFFF</color>
+    <color name="colorSearch">#1E88E5</color>
+    <color name="colorCardClearDay">#039BE5</color>
+    <color name="colorCardClearNight">#01579B</color>
+    <color name="colorCardCloudy">#757575</color>
+    <color name="colorCardFog">#E1F5FE</color>
+    <color name="colorCardPartlyDay">#8C9EFF</color>
+    <color name="colorCardPartlyNight">#37474F</color>
+    <color name="colorCardRain">#0288D1</color>
+    <color name="colorCardSleet">#00BCD4</color>
+    <color name="colorCardSnow">#E0E0E0</color>
+    <color name="colorCardWind">#FFEB3B</color>
+</resources>

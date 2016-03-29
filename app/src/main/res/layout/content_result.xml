@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="kz.beam.weatherforecast.ResultActivity"
+    tools:showIn="@layout/activity_result">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:animateLayoutChanges="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true">
+
+        <!-- TODO change the Layout to optimize -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="top">
+
+            <ImageView
+                android:id="@+id/image_weather"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/img_content_desc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <TextView
+                    android:id="@+id/fcast_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+
+                <TextView
+                    android:id="@+id/fcast_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3dp"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorTextInverse"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="90dp"
+            android:gravity="top">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/img_content_desc"
+                android:src="@drawable/ic_lowtemp" />
+
+            <TextView
+                android:id="@+id/low_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorTextInverse" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/img_content_desc"
+                android:src="@drawable/ic_hightemp" />
+
+            <TextView
+                android:id="@+id/high_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorTextInverse" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewDetails"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="150dp"
+        android:animateLayoutChanges="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:visibility="invisible"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/precip"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_precip" />
+
+                <TextView
+                    android:id="@+id/precip_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+
+                <ImageView
+                    android:id="@+id/rain_prob"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:src="@drawable/ic_rain" />
+
+                <TextView
+                    android:id="@+id/rain_prob_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+
+                <ImageView
+                    android:id="@+id/wind"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:src="@drawable/ic_wind" />
+
+                <TextView
+                    android:id="@+id/wind_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/dewpoint"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_dewpoint" />
+
+                <TextView
+                    android:id="@+id/dewpoint_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+
+                <ImageView
+                    android:id="@+id/humid"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:src="@drawable/ic_humidity" />
+
+                <TextView
+                    android:id="@+id/humid_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+
+                <ImageView
+                    android:id="@+id/visib"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:src="@drawable/ic_visibility" />
+
+                <TextView
+                    android:id="@+id/visib_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/sunrise"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_sunrise" />
+
+                <TextView
+                    android:id="@+id/sunrise_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+
+                <ImageView
+                    android:id="@+id/sunset"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="45dp"
+                    android:src="@drawable/ic_sunset" />
+
+                <TextView
+                    android:id="@+id/sunset_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTextInverse" />
+            </TableRow>
+        </TableLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
